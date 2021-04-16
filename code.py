@@ -18,5 +18,5 @@ while True:
 			browser.switch_to.window(x)
 			browser.close()
 	except:
-		subprocess.run['sudo','python3','code.py']
+		subprocess.run(['sudo','python3','code.py'])
 	subprocess.run(['./track.sh'])
