@@ -1,3 +1,4 @@
+import subprocess
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 opts = Options()
@@ -15,3 +16,4 @@ while True:
 	for x in browser.window_handles:
 		browser.switch_to.window(x)
 		browser.close()
+	subprocess.run(['./track.sh'])
