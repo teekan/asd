@@ -17,7 +17,6 @@ while True:
 		for x in browser.window_handles:
 			browser.switch_to.window(x)
 			browser.close()
-	except Expection as e:
-		print(e)
+	except:
 		subprocess.run['sudo','python3','code.py']
 	subprocess.run(['./track.sh'])
