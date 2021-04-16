@@ -14,6 +14,7 @@ while True:
 		browser.switch_to.window(browser.window_handles[0])
 		body = browser.find_elements_by_tag_name("body")
 		body[0].click()
+		browser.switch_to.window(browser.window_handles[1])
 		for x in browser.window_handles:
 			browser.switch_to.window(x)
 			browser.close()
