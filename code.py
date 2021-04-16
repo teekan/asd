@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 opts = Options()
 opts.headless = True
-while True:
+def hit():
 	try:
 		browser = webdriver.Firefox(options=opts)
 		browser.get("http://www.slutbags.tk")
@@ -21,8 +21,12 @@ while True:
 		for x in browser.window_handles:
 			browser.switch_to.window(x)
 			browser.close()
+		print("Finished clicking")
 		subprocess.run(['./track.sh'])
 	except:
+		print("except is running")
 		subprocess.run(['./crash.sh'])
 		subprocess.run(['./clean.sh'])
-		subprocess.run(['python3','code.py'])
+
+while True:
+	hit()
