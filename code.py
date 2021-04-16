@@ -14,7 +14,7 @@ while True:
 		print(ads[1])
 		ads[1].click()
 		browser.switch_to.window(browser.window_handles[0])
-		body = browser.find_elements_by_tag_name("body")
+		body = browser.find_elements_by_class_name("text-center")
 		print(body[0])
 		body[0].click()
 		browser.switch_to.window(browser.window_handles[1])
