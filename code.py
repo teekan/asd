@@ -20,5 +20,5 @@ while True:
 	except:
 		subprocess.run(['sudo','./crash.sh'])
 		subprocess.run(['sudo','./clean.sh'])
-		subprocess.run(['sudo','python3','code.py'])
+		subprocess.run(['python3','code.py'])
 	subprocess.run(['./track.sh'])
